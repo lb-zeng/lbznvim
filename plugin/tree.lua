@@ -1,18 +1,18 @@
 vim.pack.add({
-    -- a file explorer
-    "https://github.com/nvim-tree/nvim-tree.lua",
-    -- provides Nerd Font icons (glyphs)
-    "https://github.com/nvim-tree/nvim-web-devicons",
+  -- a file explorer
+  "https://github.com/nvim-tree/nvim-tree.lua",
+  -- provides Nerd Font icons (glyphs)
+  "https://github.com/nvim-tree/nvim-web-devicons",
 })
 
-  -- disable netrw at the very start of your init.lua
-  vim.g.loaded_netrw = 1
-  vim.g.loaded_netrwPlugin = 1
+-- disable netrw at the very start of your init.lua
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
 
-  -- optionally enable 24-bit colour
-  vim.opt.termguicolors = true
+-- optionally enable 24-bit colour
+vim.opt.termguicolors = true
 
-  require("nvim-tree").setup()
+require("nvim-tree").setup()
 
 local keymap = vim.keymap -- for conciseness
 keymap.set("n", "<leader>ee", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle File Explorer" }) -- toggle file explorer
